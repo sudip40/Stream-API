@@ -15,5 +15,8 @@ public class Collect {
 
         Set<String> uniqueFruits = fruits.stream().collect(Collectors.toSet());
         System.out.println(uniqueFruits);
+
+        String fruit = fruits.stream().collect(Collectors.joining(","));
+        System.out.println(fruit);
     }
 }
