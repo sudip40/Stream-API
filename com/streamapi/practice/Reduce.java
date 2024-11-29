@@ -11,5 +11,18 @@ public class Reduce {
         if(sum.isPresent()){
             System.out.println(sum.get());
         }
+        Optional<Integer> multi = numbers.stream().reduce((a,b)->a*b);
+        if(multi.isPresent()){
+            System.out.println(multi.get());
+        }
+
+        Optional<Integer> max = numbers.stream().reduce(Integer::max);
+        if(max.isPresent()){
+            System.out.println(max.get());
+        }
+        Optional<Integer> min = numbers.stream().reduce(Integer::min);
+        if(min.isPresent()){
+            System.out.println(min.get());
+        }
     }
 }
